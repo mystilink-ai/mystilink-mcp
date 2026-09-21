@@ -1,6 +1,8 @@
 # Mystilink MCP
 
-> Languages: [English](README.md) | [简体中文](README.zh-CN.md)
+> Languages: [English](../../README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Français](README.fr.md) | [Español](README.es.md)
+
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/mystilink-ai/mystilink-mcp.git)
 
 ## 概述
 
@@ -132,7 +134,7 @@ draw = tarot_draw(seed=123)
 
 ## 许可
 
-MIT。见 [LICENSE](LICENSE)。
+MIT。见 [LICENSE](../../LICENSE)。
 
 ## 反馈
 
