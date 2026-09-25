@@ -52,6 +52,23 @@ def test_bazi_calculate_envelope() -> None:
     assert out["schema_version"] == "mystilink.envelope/0.1"
     assert out["system"] == "bazi"
     assert "chart" in out
+    assert out["chart"]["day_master"] == out["chart"]["pillars"]["day"]
+
+
+@pytest.mark.skipif(not shutil.which("bazi") and not shutil.which("mystilink-bazi"), reason="bazi missing")
+def test_bazi_dayun() -> None:
+    from mystilink_mcp.tools import bazi_dayun
+
+    out = bazi_dayun(date="1990-05-15", gender="male", count=2)
+    assert isinstance(out, (dict, list))
+
+
+@pytest.mark.skipif(not shutil.which("bazi") and not shutil.which("mystilink-bazi"), reason="bazi missing")
+def test_bazi_liunian() -> None:
+    from mystilink_mcp.tools import bazi_liunian
+
+    out = bazi_liunian(year=2024)
+    assert isinstance(out, (dict, list))
 
 
 @pytest.mark.skipif(not shutil.which("lunar") and not shutil.which("mystilink-lunar"), reason="lunar missing")

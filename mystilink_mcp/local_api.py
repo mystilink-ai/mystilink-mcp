@@ -49,6 +49,18 @@ class BaziBody(BaseModel):
     locale: Optional[str] = None
 
 
+class BaziDayunBody(BaseModel):
+    date: str
+    gender: str
+    count: int = 8
+
+
+class BaziLiunianBody(BaseModel):
+    year: int
+    day_stem: Optional[str] = None
+    pillars_json: Optional[str] = None
+
+
 class ZiweiBody(BaseModel):
     datetime_str: Optional[str] = Field(default=None, description="YYYY-MM-DD HH:MM")
     timezone: Optional[str] = None
@@ -122,6 +134,16 @@ def lunar_convert(body: LunarBody) -> Dict[str, Any]:
 @app.post("/v1/bazi/calculate")
 def bazi_calculate(body: BaziBody) -> Dict[str, Any]:
     return _invoke(T.bazi_calculate, **body.model_dump())
+
+
+@app.post("/v1/bazi/dayun")
+def bazi_dayun(body: BaziDayunBody) -> Dict[str, Any]:
+    return _invoke(T.bazi_dayun, **body.model_dump())
+
+
+@app.post("/v1/bazi/liunian")
+def bazi_liunian(body: BaziLiunianBody) -> Dict[str, Any]:
+    return _invoke(T.bazi_liunian, **body.model_dump())
 
 
 @app.post("/v1/ziwei/chart")

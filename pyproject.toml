@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mystilink-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Local Mystilink MCP integration over calculator CLIs (stdio + optional 127.0.0.1 FastAPI)"
 readme = "README.md"
 license = { text = "MIT" }

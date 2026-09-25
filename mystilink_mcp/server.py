@@ -98,6 +98,31 @@ def bazi_calculate(
 
 
 @mcp.tool()
+def bazi_dayun(
+    date: str,
+    gender: str,
+    count: int = 8,
+) -> str:
+    """Compute BaZi decade fortunes (DaYun) via `bazi dayun`. gender is male|female."""
+    return _call(T.bazi_dayun, date=date, gender=gender, count=count)
+
+
+@mcp.tool()
+def bazi_liunian(
+    year: int,
+    day_stem: Optional[str] = None,
+    pillars_json: Optional[str] = None,
+) -> str:
+    """Compute BaZi annual fortune (LiuNian) via `bazi liunian`."""
+    return _call(
+        T.bazi_liunian,
+        year=year,
+        day_stem=day_stem,
+        pillars_json=pillars_json,
+    )
+
+
+@mcp.tool()
 def ziwei_chart(
     datetime_str: Optional[str] = None,
     timezone: Optional[str] = None,

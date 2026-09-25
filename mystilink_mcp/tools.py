@@ -79,6 +79,30 @@ def bazi_calculate(
     return run_cli("bazi", args)
 
 
+def bazi_dayun(
+    *,
+    date: str,
+    gender: str,
+    count: int = 8,
+) -> Dict[str, Any]:
+    """Decade fortunes via `bazi dayun` (no envelope flag on this CLI yet)."""
+    args: List[str] = ["dayun", "--date", date, "--gender", gender, "--count", str(count)]
+    return run_cli("bazi", args)
+
+
+def bazi_liunian(
+    *,
+    year: int,
+    day_stem: Optional[str] = None,
+    pillars_json: Optional[str] = None,
+) -> Dict[str, Any]:
+    """Annual fortune via `bazi liunian` (no envelope flag on this CLI yet)."""
+    args: List[str] = ["liunian", "--year", str(year)]
+    _flag(args, "--day-stem", day_stem)
+    _flag(args, "--pillars-json", pillars_json)
+    return run_cli("bazi", args)
+
+
 def ziwei_chart(
     *,
     datetime_str: Optional[str] = None,
@@ -195,6 +219,8 @@ def list_cli_status() -> Dict[str, Any]:
 TOOLS = (
     lunar_convert,
     bazi_calculate,
+    bazi_dayun,
+    bazi_liunian,
     ziwei_chart,
     horoscope_natal,
     tarot_draw,
@@ -205,6 +231,8 @@ TOOLS = (
 __all__ = [
     "lunar_convert",
     "bazi_calculate",
+    "bazi_dayun",
+    "bazi_liunian",
     "ziwei_chart",
     "horoscope_natal",
     "tarot_draw",
