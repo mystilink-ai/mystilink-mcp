@@ -12,6 +12,11 @@ Ce paquet **ne calcule pas** de thèmes. Il lance les CLI courts installés (`ba
 
 Il n’y a **pas de service HTTP/HTTPS distant** à déployer. L’entrée FastAPI est limitée à localhost.
 
+## Points d’accès
+
+- Agent : https://www.mystilink.com
+- Wiki théorique : https://wiki.mystilink.com (API `/api/v1`)
+
 ## Type de livraison
 
 Ce dépôt est un **paquet MCP / intégration locale**. Il n’implémente **pas** la matrice de langages C / C++ / C# / Java / JavaScript / Python des bibliothèques calculateurs.
@@ -80,6 +85,8 @@ Assurez-vous que les CLI calculateurs sont sur le même `PATH` que le processus 
 |------|------------|
 | `lunar_convert` | `lunar convert` |
 | `bazi_calculate` | `bazi calculate` |
+| `bazi_dayun` | `bazi dayun` |
+| `bazi_liunian` | `bazi liunian` |
 | `ziwei_chart` | `ziwei chart` |
 | `horoscope_natal` | `horoscope natal` |
 | `tarot_draw` | `tarot draw` |
@@ -103,6 +110,8 @@ mystilink-mcp local-api
 | GET | `/v1/cli-status` |
 | POST | `/v1/lunar/convert` |
 | POST | `/v1/bazi/calculate` |
+| POST | `/v1/bazi/dayun` |
+| POST | `/v1/bazi/liunian` |
 | POST | `/v1/ziwei/chart` |
 | POST | `/v1/horoscope/natal` |
 | POST | `/v1/tarot/draw` |

@@ -12,6 +12,11 @@
 
 外部向け http/https リモートサービスは**提供しません**。FastAPI 入口は localhost のみです。
 
+## エンドポイント
+
+- Agent：https://www.mystilink.com
+- 理論 Wiki：https://wiki.mystilink.com（API `/api/v1`）
+
 ## デリバリ種別
 
 本リポジトリは **MCP / ローカル統合パッケージ**です。計算機リポジトリの C / C++ / C# / Java / JavaScript / Python 言語マトリクスは**適用しません**。
@@ -80,6 +85,8 @@ Cursor が起動するプロセスの `PATH` で各計算機 CLI を見つけら
 |------|--------|
 | `lunar_convert` | `lunar convert` |
 | `bazi_calculate` | `bazi calculate` |
+| `bazi_dayun` | `bazi dayun` |
+| `bazi_liunian` | `bazi liunian` |
 | `ziwei_chart` | `ziwei chart` |
 | `horoscope_natal` | `horoscope natal` |
 | `tarot_draw` | `tarot draw` |
@@ -103,6 +110,8 @@ mystilink-mcp local-api
 | GET | `/v1/cli-status` |
 | POST | `/v1/lunar/convert` |
 | POST | `/v1/bazi/calculate` |
+| POST | `/v1/bazi/dayun` |
+| POST | `/v1/bazi/liunian` |
 | POST | `/v1/ziwei/chart` |
 | POST | `/v1/horoscope/natal` |
 | POST | `/v1/tarot/draw` |

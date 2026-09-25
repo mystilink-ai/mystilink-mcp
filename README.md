@@ -12,6 +12,11 @@ This package does **not** compute charts. It spawns installed short CLIs (`bazi`
 
 There is **no remote HTTP/HTTPS service** to deploy. The FastAPI entry is localhost-only.
 
+## Endpoints
+
+- Agent: https://www.mystilink.com
+- Theory Wiki: https://wiki.mystilink.com (API `/api/v1`)
+
 ## Delivery type
 
 This repository is an **MCP / local integration package**. It does **not** implement the C / C++ / C# / Java / JavaScript / Python language matrix used by calculator libraries.
@@ -80,6 +85,8 @@ Ensure calculator CLIs are on the same `PATH` as the process Cursor launches.
 |------|------------|
 | `lunar_convert` | `lunar convert` |
 | `bazi_calculate` | `bazi calculate` |
+| `bazi_dayun` | `bazi dayun` |
+| `bazi_liunian` | `bazi liunian` |
 | `ziwei_chart` | `ziwei chart` |
 | `horoscope_natal` | `horoscope natal` |
 | `tarot_draw` | `tarot draw` |
@@ -103,6 +110,8 @@ mystilink-mcp local-api
 | GET | `/v1/cli-status` |
 | POST | `/v1/lunar/convert` |
 | POST | `/v1/bazi/calculate` |
+| POST | `/v1/bazi/dayun` |
+| POST | `/v1/bazi/liunian` |
 | POST | `/v1/ziwei/chart` |
 | POST | `/v1/horoscope/natal` |
 | POST | `/v1/tarot/draw` |

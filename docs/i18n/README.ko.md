@@ -12,6 +12,11 @@
 
 외부 http/https 원격 서비스는 **제공하지 않습니다**. FastAPI 진입점은 localhost만입니다.
 
+## 엔드포인트
+
+- Agent: https://www.mystilink.com
+- 이론 Wiki: https://wiki.mystilink.com (API `/api/v1`)
+
 ## 제공 유형
 
 이 저장소는 **MCP / 로컬 통합 패키지**입니다. 계산기 저장소의 C / C++ / C# / Java / JavaScript / Python 언어 매트릭스는 **적용하지 않습니다**.
@@ -80,6 +85,8 @@ Cursor가 띄운 프로세스의 `PATH`에서 각 계산기 CLI를 찾을 수 �
 |------|--------|
 | `lunar_convert` | `lunar convert` |
 | `bazi_calculate` | `bazi calculate` |
+| `bazi_dayun` | `bazi dayun` |
+| `bazi_liunian` | `bazi liunian` |
 | `ziwei_chart` | `ziwei chart` |
 | `horoscope_natal` | `horoscope natal` |
 | `tarot_draw` | `tarot draw` |
@@ -103,6 +110,8 @@ mystilink-mcp local-api
 | GET | `/v1/cli-status` |
 | POST | `/v1/lunar/convert` |
 | POST | `/v1/bazi/calculate` |
+| POST | `/v1/bazi/dayun` |
+| POST | `/v1/bazi/liunian` |
 | POST | `/v1/ziwei/chart` |
 | POST | `/v1/horoscope/natal` |
 | POST | `/v1/tarot/draw` |

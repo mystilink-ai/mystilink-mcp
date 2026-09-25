@@ -12,6 +12,11 @@
 
 **不提供**对外 http/https 远程服务。FastAPI 入口仅本机回环。
 
+## 相关地址
+
+- Agent：https://www.mystilink.com
+- 理论 Wiki：https://wiki.mystilink.com（API `/api/v1`）
+
 ## 交付类型
 
 本仓库为 **MCP / 本地集成包**。**不适用**计算器仓库的 C / C++ / C# / Java / JavaScript / Python 语言矩阵。
@@ -80,6 +85,8 @@ mystilink-mcp stdio
 |------|--------|
 | `lunar_convert` | `lunar convert` |
 | `bazi_calculate` | `bazi calculate` |
+| `bazi_dayun` | `bazi dayun` |
+| `bazi_liunian` | `bazi liunian` |
 | `ziwei_chart` | `ziwei chart` |
 | `horoscope_natal` | `horoscope natal` |
 | `tarot_draw` | `tarot draw` |
@@ -103,6 +110,8 @@ mystilink-mcp local-api
 | GET | `/v1/cli-status` |
 | POST | `/v1/lunar/convert` |
 | POST | `/v1/bazi/calculate` |
+| POST | `/v1/bazi/dayun` |
+| POST | `/v1/bazi/liunian` |
 | POST | `/v1/ziwei/chart` |
 | POST | `/v1/horoscope/natal` |
 | POST | `/v1/tarot/draw` |
